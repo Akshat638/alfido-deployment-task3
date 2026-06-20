@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  churn-api:
+    build: .
+    container_name: churn_prediction_api
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production
